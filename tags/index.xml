@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Teach Me To Code</title>
+    <link>http://example.org/tags/</link>
+    <description>Recent content in Tags on Teach Me To Code</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Sep 2016 16:05:11 +0000</lastBuildDate><atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS, bug</title>
+      <link>http://example.org/tags/css-bug/</link>
+      <pubDate>Mon, 12 Sep 2016 16:05:11 +0000</pubDate>
+      
+      <guid>http://example.org/tags/css-bug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JavaScript C</title>
+      <link>http://example.org/tags/javascript-c/</link>
+      <pubDate>Thu, 21 Jul 2016 17:52:14 +0000</pubDate>
+      
+      <guid>http://example.org/tags/javascript-c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JS, ES6</title>
+      <link>http://example.org/tags/js-es6/</link>
+      <pubDate>Sat, 09 Jul 2016 18:13:42 +0000</pubDate>
+      
+      <guid>http://example.org/tags/js-es6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux, OS X, git, sysadmin</title>
+      <link>http://example.org/tags/linux-os-x-git-sysadmin/</link>
+      <pubDate>Tue, 28 Jun 2016 17:24:21 +0000</pubDate>
+      
+      <guid>http://example.org/tags/linux-os-x-git-sysadmin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript, node.js, markdown, hexo</title>
+      <link>http://example.org/tags/javascript-node.js-markdown-hexo/</link>
+      <pubDate>Wed, 15 Jun 2016 16:11:47 +0000</pubDate>
+      
+      <guid>http://example.org/tags/javascript-node.js-markdown-hexo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

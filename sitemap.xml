@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://example.org/posts/</loc>
+    <lastmod>2018-09-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2018-09-14-reactathon/</loc>
+    <lastmod>2018-09-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/</loc>
+    <lastmod>2018-09-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-10-13-sfjs/</loc>
+    <lastmod>2016-10-13T18:32:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-09-12-word-break-bug/</loc>
+    <lastmod>2016-09-12T16:05:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/css-bug/</loc>
+    <lastmod>2016-09-12T16:05:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/</loc>
+    <lastmod>2016-09-12T16:05:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/javascript-c/</loc>
+    <lastmod>2016-07-21T17:52:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-07-21-teaching-c-to-a-js-developer/</loc>
+    <lastmod>2016-07-21T17:52:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-07-09-hash-maps-es6-maps-and-weak-maps/</loc>
+    <lastmod>2016-07-09T18:13:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/js-es6/</loc>
+    <lastmod>2016-07-09T18:13:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-06-28-git-dotfiles-and-the-dream/</loc>
+    <lastmod>2016-06-28T17:24:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/linux-os-x-git-sysadmin/</loc>
+    <lastmod>2016-06-28T17:24:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-06-15-hello-world/</loc>
+    <lastmod>2016-06-15T16:11:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/javascript-node.js-markdown-hexo/</loc>
+    <lastmod>2016-06-15T16:11:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/</loc>
+  </url>
+  
+</urlset>

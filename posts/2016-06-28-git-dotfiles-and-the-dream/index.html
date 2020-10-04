@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <title>Git, Dotfiles, and the Dream of a Truly Cross-Platform Work Environment</title>
+</head>
+
+  <body>
+    <nav id="nav-border" class="container">
+  <nav id="nav" class="nav justify-content-center">
+    
+      
+      <a class="nav-link" href="/">Home</a>
+    
+      
+      <a class="nav-link" href="/posts/">Blog</a>
+    
+      
+      <a class="nav-link" href="/tags/">Tags</a>
+    
+      
+      <a class="nav-link" href="/about/">About</a>
+    
+  </nav>
+</nav>
+
+    <div class="container">
+      <main id="main">
+        
+
+<h1>Git, Dotfiles, and the Dream of a Truly Cross-Platform Work Environment</h1>
+<p>So last October I started using Git to track my <a href="https://github.com/christopherfujino/dotfiles">dotfiles and config files</a>. Although it makes sense to use version control in case you make a change that breaks your system, to me the biggest appeal of doing this was so that I could easily synchronize all my config files between devices. My <a href="https://github.com/christopherfujino/dotfiles/commit/041b0d1d845e640d3534f5ebbe73da3315a646f9">first commit</a> included config files for npm and vim, and now it&rsquo;s grown to include bash, window managers, and terminal emulators.</p>
+<h2 id="the-problem">The Problem</h2>
+<p>At first I wasn&rsquo;t sure how to track the files. Looking around on Github, a lot of coders, including the eminent <a href="https://github.com/tpope/tpope">tpope</a>, seemed to just <code>git init</code> their home directory, and then <code>git add</code> each file they wanted to track. This seemed a messy solution, however, and also would not translate well to my different systems (both different software setups and of course different operating systems).</p>
+<h2 id="an-elegant-solution-for-a-more-civilized-age">An Elegant Solution for a More Civilized Age</h2>
+<p>The solution I came up with was to store all the config files which I wanted to track in a separate directory (I chose <code>~/git/dotfiles</code>) tracked by git. I then symlinked from each tracked file to the location on my system the file was supposed to be (e.g. <code>$ ln -s ~/git/dotfiles/.vimrc ~/.vimrc</code>). This allowed me to <code>git clone</code> the repo safely onto any system, and then choose which individual files I wanted to utilize on that system.</p>
+<p>The fact that this solution was cross-platform (I currently use it on my Arch Linux laptop, my OS X desktop, and a headless linux server on the cloud) was very exciting to me. It was a big motivation for me to build up my .vimrc, knowing I could use that setup on any of my systems, including servers I SSH into. I also recently switched to using <a href="http://software.schmorp.de/pkg/rxvt-unicode.html">rxvt-unicode</a> as my Linux terminal emulator of choice. I would call it the terminal emulator equivalent of Vim: lightweight, seemingly minimal at first, but incredibly customizable (and to topic at hand, all through a single text config file). I need to explore setting it up on OS X, but if I did I could have a consistent terminal experience across all my Unix-like devices. Which would be amazing.</p>
+<h2 id="a-text-based-operating-system">A Text-Based Operating System?</h2>
+<p>The more I switch to using text-based (cross-platform) terminal apps, using config files which I sync on Github, the more I am approaching a text-based, platform independent operating system. Especially for coding, my main tools at the moment are tmux, Neovim/Vim, Git, npm. The only GUI tool is Chrome/Chromium. I can see a future where OS X or Linux are just trivial background platforms. I can see the IT world moving in this direction anyway with projects like <a href="http://docker.com">Docker</a> and <a href="https://coreos.com/">CoreOS</a>.</p>
+<h2 id="teach-me-to-code">Teach Me To Code</h2>
+<p>The next thing I&rsquo;d like to learn to level up my dotfiles would be to create a node.js text-based script to automate the symlinking of scripts to new systems. I recently discovered the <a href="http://savannah.gnu.org/projects/stow">GNU Stow</a> project, which already solves this problem, but I&rsquo;ve been meaning to learn how to create node.js terminal apps. Another would be to add in platform-specific (i.e. OS X or Linux) settings to certain config files. In particular it would be great if I could use the same bash config files on both platforms. Please let me know if you have any feedback, ideas, or suggestions for me!</p>
+
+
+
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,6 +1,0 @@
-# Used by server for caching
-resources
-# Build output
-public
-
-*.swp*
