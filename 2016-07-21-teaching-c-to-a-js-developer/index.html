@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <title>Teaching C To A JavaScript Developer</title>
+</head>
+
+  <body>
+    <nav class="navbar fixed-top navbar-light bg-light navbar-expand-sm">
+  <a href="/">Christopher Fujino</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                               data-target="#navbarMenu">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarMenu">
+    <ul id="nav" class="navbar-nav ml-auto">
+      
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/blog">Blog</a>
+        </li>
+      
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/tags/">Tags</a>
+        </li>
+      
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/about/">About</a>
+        </li>
+      
+    </ul>
+  </div>
+</nav>
+
+    
+    <div class="container mt-5 pt-4">
+      <main id="main">
+        
+
+<h1>Teaching C To A JavaScript Developer</h1>
+<p>According to Douglas Crockford, <a href="http://www.crockford.com/javascript/javascript.html">JavaScript is the world&rsquo;s most misunderstood programming language</a>, and I am inclined to agree. Especially in the &rsquo;90s, I think a lot of programmers first encountered JavaScript from a C/C++ or Java background (indeed, JavaScript-inventor Brendan Eich has said that he was tasked with creating Java&rsquo;s little brother to run in the browser). I was one of them. We found the syntax very familiar. In fact, after reading a tutorial or two, I was able to write a slot machine game. JavaScript is such a flexible language that it is possible to write all kinds of applications in it without really understanding how the language works.</p>
+<p>This has led to books such as those in the <a href="https://github.com/getify/You-Dont-Know-JS">You Don&rsquo;t Know JS</a> series. This has also led me to ask myself the question: is JavaScript a good first language for a programmer to learn? Certainly it would be easy to do some cool things with the language, but what about when the time comes to learn about <a href="http://www.w3schools.com/js/js_hoisting.asp">variable hoisting</a>? And I only recently learned that JavaScript always passes by value, <a href="http://stackoverflow.com/questions/518000/is-javascript-a-pass-by-reference-or-pass-by-value-language">even if that value happens to be a reference(?!)</a>.</p>
+<p>Basically, there are a lot of educational materials out there for those from C-family or Java backgrounds to learn JavaScript, but I thought I would write this post as sort of the transitive, demonstrating the relative simplicity of C. It&rsquo;s been many years on and I&rsquo;m still trying to learn JavaScript, but I feel like it would be relatively easy to teach a programmer familiar with the complexities of JavaScript the straightforward and literal C language.</p>
+<h3 id="variable-types">Variable Types</h3>
+<p>Maybe the biggest difference between C and JavaScript is that C has statically-typed variables while JavaScript has dynamic, untyped variables. In C, variables must be defined before they are used as belonging to a fixed type, and must remain that type for the duration of their life.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">float</span> pi <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.14159</span>
+<span style="color:#66d9ef">char</span> c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C&#39;</span>; <span style="color:#75715e">// this is a character variable, it can only hold a single character
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> string[<span style="color:#ae81ff">13</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello, world!&#34;</span>;  <span style="color:#75715e">// this is a string, or an array of characters
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> array[<span style="color:#ae81ff">5</span>] <span style="color:#f92672">=</span> { <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span> }; <span style="color:#75715e">// this is an array
+</span></code></pre></div><p>Variables don&rsquo;t have to be initialized when they&rsquo;re declared, but they have to be declared with a keyword corresponding to their type. Some important distinctions between JavaScript:</p>
+<ol>
+<li>Integers and floats are separate types. There are other number types, such as <code>unsigned int</code> for unsigned integers, or <code>long int</code> for 32-bit integers, but for most cases integers and floats are sufficient.</li>
+<li>Arrays are not really a built-in data type as they are in JavaScript, but a collection of like-typed variables. You can create an array of any type. Arrays must be initialized with a size when it&rsquo;s declared, and cannot be resized.</li>
+<li>Characters are their own type, and are essentially the same as an 8-bit integer. &ldquo;Strings&rdquo; in C are simply arrays of characters.</li>
+<li>Single quotes are used to denote single characters in C, while double quotes are used for strings.</li>
+<li>Since C isn&rsquo;t object-oriented, these data types have no properties or methods. Arrays have no <code>.length</code> property, and numbers have no <code>.toString()</code> methods. There are, however, libraries for manipulating these data types.</li>
+</ol>
+<h3 id="variable-scope">Variable Scope</h3>
+<p>In C, variables are block-scoped. Global variables can be declared explicitly by declaring them outside of any function. C has no variable hoisting, and C variables cannot be used without declaring them.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+  <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+
+  <span style="color:#66d9ef">if</span> (<span style="color:#ae81ff">1</span>) {
+    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+    printf(<span style="color:#e6db74">&#34;%i</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, i);  <span style="color:#75715e">// will print out &#34;3&#34;, the local block value
+</span><span style="color:#75715e"></span>  }
+
+  func(); <span style="color:#75715e">// will print out &#34;1&#34;, global value
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func</span>() {
+  printf(<span style="color:#e6db74">&#34;%i</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, i);
+}
+</code></pre></div><p>This is similar to the ES6 <code>let</code> operator&rsquo;s behavior, though <code>let</code> still hoists the declaration to the top of the block.</p>
+<h3 id="pointers">Pointers</h3>
+<p>Probably the most feared part of the C language is pointers. They&rsquo;re really not that awful, though.</p>
+<p>A normal variable in C contains a value, which is stored in some address in memory. A pointer in C contains an address in memory, which contains (maybe) some value. Pointers are declared by adding an <code>*</code> before the variable&rsquo;s name. Uninitialized pointers are dangerous because we don&rsquo;t know what they&rsquo;re pointing at. Regular pointers can return their address through the use of the <code>&amp;</code> operator. By default, pointers return the address they contain, but they can return the value of the address they point to by prefacing them again by the <code>*</code> operator. For example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>pointer <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>x;
+
+printf(<span style="color:#e6db74">&#34;%i&#34;</span>, pointer);  <span style="color:#75715e">// this will return a memory address, not sure what it will be
+</span><span style="color:#75715e"></span>printf(<span style="color:#e6db74">&#34;%i&#34;</span>, <span style="color:#f92672">*</span>pointer); <span style="color:#75715e">// this will turn 5, where pointer points to
+</span></code></pre></div><p>Printing a memory address to standard output is not very helpful. However, using pointers is helpful in passing larger data structures like arrays to a function. In fact, under the hood, this is similar to how JavaScript passes objects to functions. Pointers can also be used to change the value of a variable within an external function. Without pointers, variables are passed to functions by value. For example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span> (<span style="color:#66d9ef">void</span>) {
+  <span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+  <span style="color:#66d9ef">int</span> pointer <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>x;
+
+  func(pointer);  <span style="color:#75715e">// here the address is passed to the function
+</span><span style="color:#75715e"></span>  printf(<span style="color:#e6db74">&#34;%i</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">*</span>pointer); <span style="color:#75715e">// value is now 3
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>x) {
+  <span style="color:#f92672">*</span>x <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+}
+</code></pre></div><p>As noted earlier, arrays are not really a built-in type in C. Actually, array notation is just a shorthand for a pointer which accesses adjacent locations in memory. For instance if you create a string of 8 characters, those characters will all be stored next to each other in memory. It&rsquo;s important to note, also, that the name of an array (or string) by itself will refer to the address of its first element. Thus a pointer can be assigned to an array like so: <code>pointer = array;</code>. This pointer will now point to the address of the first element. A neat trick is that since the memory locations in an array are adjacent, the increment operator <code>++</code> will increment through the elements of the array. For example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#66d9ef">char</span> string[] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello, world!&#34;</span>;
+<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>pointer <span style="color:#f92672">=</span> string; <span style="color:#75715e">// pointer assigned to address of string
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">while</span>(<span style="color:#f92672">*</span>pointer) { <span style="color:#75715e">// while our pointer still points to a valid character
+</span><span style="color:#75715e"></span>  printf(<span style="color:#e6db74">&#34;%c&#34;</span>, <span style="color:#f92672">*</span>pointer); <span style="color:#75715e">// print out the contents the pointer points to
+</span><span style="color:#75715e"></span>  pointer<span style="color:#f92672">++</span>;  <span style="color:#75715e">// point to the next location in memory
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>This code will print out characters of the string one by one. The while-loop works because in C, strings are terminated with a <code>null</code> character.</p>
+<h3 id="memory-allocation">Memory Allocation</h3>
+<p>In JavaScript, memory management is automated. When you make an array bigger in JavaScript, the additional memory is allocated for you. When variables are no longer referenced, they are garbage collected for you.</p>
+<p>In C, you have to handle this yourself. Let&rsquo;s say you have a program that creates an array of <code>x</code> integers, where <code>x</code> is a count read from the user. We cannot initialize the array in our code, because we do not know what size to make it before runtime. The <code>malloc</code> function, specified by the <code>malloc.h</code> header file, will allocate memory of a specified size from the heap, and return an address to it. For example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>) {
+  <span style="color:#66d9ef">int</span> size <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">// this will be the size of our string
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>initial;  <span style="color:#75715e">// this will point to the beginning of our string
+</span><span style="color:#75715e"></span>
+  printf(<span style="color:#e6db74">&#34;How big of a string would you like? &#34;</span>);
+  scanf(<span style="color:#e6db74">&#34;%i&#34;</span>, <span style="color:#f92672">&amp;</span>size); <span style="color:#75715e">// read an integer from input, and store in size
+</span><span style="color:#75715e"></span>  initial <span style="color:#f92672">=</span> (<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>)malloc(size); <span style="color:#75715e">// allocate a string of &#34;size&#34; length
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>increment <span style="color:#f92672">=</span> initial;  <span style="color:#75715e">// this pointer will move through the string
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; i<span style="color:#f92672">&lt;</span>size; i<span style="color:#f92672">++</span>) {
+    <span style="color:#f92672">*</span>increment <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;!&#39;</span>; <span style="color:#75715e">// fill the string with exclamation points
+</span><span style="color:#75715e"></span>    increment<span style="color:#f92672">++</span>;
+  }
+  printf(<span style="color:#e6db74">&#34;%s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, initial);  <span style="color:#75715e">// print out the string
+</span><span style="color:#75715e"></span>
+  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><p>This can potentially lead to memory leaks, if your application continues to allocate for itself more and more memory. It is up to the programmer to keep track of this memory that has been allocated, and then free it when it is no longer used. This is done with the <code>free()</code> function, which takes a pointer to the allocated chunk as its argument. E.g.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C">myFunc(<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>string, <span style="color:#66d9ef">int</span> size) {
+  <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>pointer <span style="color:#f92672">=</span> (<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>)malloc(size);
+  strcpy(pointer, string);
+  printf(<span style="color:#e6db74">&#34;%s&#34;</span>, pointer);
+  free(pointer);
+}
+</code></pre></div><p>This isn&rsquo;t a particularly useful example, but it shows code that would be a potential memory leak if not for the use of <code>free(pointer)</code> at the end. Otherwise, each time the function was called, the application would use more memory, while the pointer to it would be lost.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>So what have we learned? Well, for one, it&rsquo;s pretty clear to me that JavaScript uses pointers a lot, it just abstracts the programmer away from those details. I can see how JavaScript not only uses them to arrays/objects to and from functions, but even for the implementation of the objects themselves.</p>
+<p>It&rsquo;s also very clear to me that programming in JavaScript is like getting a job done with your big brother holding your hand; a big brother who steps in and manages certain difficult tasks for you, so that you can focus on the big picture. On the other hand, coding in C is flying solo, without anyone checking on what you do, or helping you to manage everything going on. Which explains why a lot of C programmers (myself included) mocked JavaScript at first. It seemed like a kid&rsquo;s toy. And yet, in retrospect, it&rsquo;s clear that higher-level languages like JavaScript are more suited to large, complex projects. Also, memory limits and processor speed are less of a concern these days, so most applications today don&rsquo;t <strong>NEED</strong> to be written in C.</p>
+<p>The classic example of the limitations of C is the buffer overrun. Because arrays in C basically use a pointer to look at consecutive addresses in memory, there is no built-in bounds checking. If you look beyond the end of the array, the pointer simply points further in memory than it should, and can read/write to someplace potentially dangerous. See:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">getPin</span>() {
+  <span style="color:#66d9ef">char</span> pin[<span style="color:#ae81ff">5</span>];  <span style="color:#75715e">// since every string ends with NULL, we make this 5 elements big
+</span><span style="color:#75715e"></span>  printf(<span style="color:#e6db74">&#34;Enter your 4-digit pin: &#34;</span>);
+  scanf(<span style="color:#e6db74">&#34;%s&#34;</span>, pin);
+  <span style="color:#75715e">// process the pin
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>With this code, we are passing <code>scanf()</code> the location of the first element in the <code>pin</code> string we have created, but it doesn&rsquo;t know how big it is. If the user types in a string longer than 4 characters long, scanf will continue writing the contents past the end of the <code>pin</code> string. At best, this will cause unpredictable results, at worst this could lead to a malicious user injecting malicious code into the application. We never have to worry about this with JavaScript strings.</p>
+
+
+
+      </main>
+      <footer class="footer text-center mt-5 mb-4">
+  <div class="container">
+    Copyright &copy; 2020 Christopher Fujino
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+</footer>
+
+    </div>
+  </body>
+</html>

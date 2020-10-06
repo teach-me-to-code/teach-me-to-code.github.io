@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sysadmin on Teach Me To Code</title>
+    <link>http://example.org/tags/sysadmin/</link>
+    <description>Recent content in sysadmin on Teach Me To Code</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 Jun 2016 17:24:21 +0000</lastBuildDate><atom:link href="http://example.org/tags/sysadmin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git, Dotfiles, and the Dream of a Truly Cross-Platform Work Environment</title>
+      <link>http://example.org/2016-06-28-git-dotfiles-and-the-dream/</link>
+      <pubDate>Tue, 28 Jun 2016 17:24:21 +0000</pubDate>
+      
+      <guid>http://example.org/2016-06-28-git-dotfiles-and-the-dream/</guid>
+      <description>So last October I started using Git to track my dotfiles and config files. Although it makes sense to use version control in case you make a change that breaks your system, to me the biggest appeal of doing this was so that I could easily synchronize all my config files between devices. My first commit included config files for npm and vim, and now it&amp;rsquo;s grown to include bash, window managers, and terminal emulators.</description>
+    </item>
+    
+  </channel>
+</rss>

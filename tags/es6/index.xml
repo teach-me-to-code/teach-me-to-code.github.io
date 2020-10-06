@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ES6 on Teach Me To Code</title>
+    <link>http://example.org/tags/es6/</link>
+    <description>Recent content in ES6 on Teach Me To Code</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Jul 2016 18:13:42 +0000</lastBuildDate><atom:link href="http://example.org/tags/es6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ES6 Maps, Weak Maps, and the Determinism of the JavaScript Garbage Collector</title>
+      <link>http://example.org/2016-07-09-hash-maps-es6-maps-and-weak-maps/</link>
+      <pubDate>Sat, 09 Jul 2016 18:13:42 +0000</pubDate>
+      
+      <guid>http://example.org/2016-07-09-hash-maps-es6-maps-and-weak-maps/</guid>
+      <description>Let&amp;rsquo;s say you have an app with a number of objects, and you&amp;rsquo;d like to store metadata about certain objects. How would you do this? What I&amp;rsquo;ve been doing is creating a special object for the purpose, like so:
+var x = { uniqueIdentifier : &amp;#34;this is my first object&amp;#34; }; var y = { uniqueIdentifier : &amp;#34;this is my second object&amp;#34; }; var registry = {}; registry[x.uniqueIdentifier] = &amp;#39;this object is okay&amp;#39;; registry[y.</description>
+    </item>
+    
+  </channel>
+</rss>

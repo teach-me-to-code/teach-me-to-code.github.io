@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Meetups on Teach Me To Code</title>
+    <link>http://example.org/tags/meetups/</link>
+    <description>Recent content in Meetups on Teach Me To Code</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Oct 2016 18:32:22 +0000</lastBuildDate><atom:link href="http://example.org/tags/meetups/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sf.js</title>
+      <link>http://example.org/2016-10-13-sfjs/</link>
+      <pubDate>Thu, 13 Oct 2016 18:32:22 +0000</pubDate>
+      
+      <guid>http://example.org/2016-10-13-sfjs/</guid>
+      <description>I recently went to the Bay Area to visit my brother and got a chance to go to some meetups and mingle with the local nerdfolk. Here&amp;rsquo;s a summary of the meetups I attended and what I learned:
+Electron Meetup The first meetup was for the exciting new Node.js-based framework Electron. It lets you build desktop apps in HTML/CSS/JS and then distribute it to Windows/OS X/Linux. I&amp;rsquo;ve been playing around with it, so I was excited to hear more about it, especially since two of the presenters were from Github and part of the Electron team.</description>
+    </item>
+    
+  </channel>
+</rss>

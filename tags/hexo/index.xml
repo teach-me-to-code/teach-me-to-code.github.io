@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hexo on Teach Me To Code</title>
+    <link>http://example.org/tags/hexo/</link>
+    <description>Recent content in hexo on Teach Me To Code</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Jun 2016 16:11:47 +0000</lastBuildDate><atom:link href="http://example.org/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello, World!</title>
+      <link>http://example.org/2016-06-15-hello-world/</link>
+      <pubDate>Wed, 15 Jun 2016 16:11:47 +0000</pubDate>
+      
+      <guid>http://example.org/2016-06-15-hello-world/</guid>
+      <description>Most programming blogs feature posts from veteran programmers teaching others new concepts and techniques. However, I am a beginning programmer and I plan to blog about the things I&amp;rsquo;m learning and the difficulties I&amp;rsquo;m having. Hopefully I can help other beginning programmers, but more importantly I hope people will get involved and teach me to code!
+Why I Chose To Use Hexo Over the years, I&amp;rsquo;ve experimented with many different ways to manage a blog.</description>
+    </item>
+    
+  </channel>
+</rss>
