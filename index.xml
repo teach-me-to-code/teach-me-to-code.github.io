@@ -6,7 +6,16 @@
     <description>Recent content on Teach Me To Code</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Oct 2016 18:32:22 +0000</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Teaching C to a JavaScript Developer, Redux</title>
+      <link>http://example.org/2021-05-30-teaching-c-to-a-js-dev-redux/</link>
+      <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/2021-05-30-teaching-c-to-a-js-dev-redux/</guid>
+      <description>Pointers int i = 1; int *ptr; ptr = &amp;amp;i; *ptr = 2; printf(&amp;#34;i is %i\n&amp;#34;, i); // &amp;#34;i is 2&amp;#34; void increment(int *i) { *i += 1; } int i = 1; increment(&amp;amp;i); printf(&amp;#34;is is %i\n&amp;#34;, i); // &amp;#34;i is 2&amp;#34; Arrays int my_favorite_numbers[] = {2, 3, 5, 7}; printf(&amp;#34;The second element is %i\n&amp;#34;, my_favorite_numbers[1]); // &amp;#34;The second element is 3&amp;#34; printf(&amp;#34;The fifth element is %i\n&amp;#34;, my_favorite_numbers[4]); // Undefined behavior, don&amp;#39;t do this!</description>
+    </item>
+    
     <item>
       <title>Sf.js</title>
       <link>http://example.org/2016-10-13-sfjs/</link>
