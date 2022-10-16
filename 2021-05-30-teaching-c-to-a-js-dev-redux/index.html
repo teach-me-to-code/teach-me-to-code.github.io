@@ -32,6 +32,23 @@
         
 
 <h1>Teaching C to a JavaScript Developer, Redux</h1>
+<h2 id="primitive-types">Primitive Types</h2>
+<p>The primitive types in JavaScript are <code>number</code>, <code>string</code>, <code>boolean</code>,
+<code>undefined</code>, and <code>null</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">42</span>;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello, world!&#34;</span>;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">bool</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">undef</span>; <span style="color:#75715e">// an uninitialized variable has the value `undefined`
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">nul</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</code></pre></div><p>These types map closely to how a developer would use them in a program:
+numbers are obviously for counting and arithmetic, strings for storing textual
+data, booleans for values that must be either true or false, undefined for
+variables that have not yet been initialized, and null for variables that
+explicitly do not contain a value.</p>
+<p>The primitive types in C, however, much more closely map to how the underlying
+data is stored in memory. There are no strings, booleans (C99 technically
+added a boolean type, but these require a special header file and are largely
+synctactic sugar over )</p>
 <h2 id="pointers">Pointers</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>ptr;
@@ -82,7 +99,7 @@ printf(<span style="color:#e6db74">&#34;Hello %s</span><span style="color:#ae81f
       </main>
       <footer class="footer text-center mt-5 mb-4">
   <div class="container">
-    Copyright &copy; 2021 Christopher Fujino
+    Copyright &copy; 2022 Christopher Fujino
   </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

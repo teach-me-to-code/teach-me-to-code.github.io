@@ -13,7 +13,8 @@
       <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>
       
       <guid>http://example.org/2021-05-30-teaching-c-to-a-js-dev-redux/</guid>
-      <description>Pointers int i = 1; int *ptr; ptr = &amp;amp;i; *ptr = 2; printf(&amp;#34;i is %i\n&amp;#34;, i); // &amp;#34;i is 2&amp;#34; void increment(int *i) { *i += 1; } int i = 1; increment(&amp;amp;i); printf(&amp;#34;is is %i\n&amp;#34;, i); // &amp;#34;i is 2&amp;#34; Arrays int my_favorite_numbers[] = {2, 3, 5, 7}; printf(&amp;#34;The second element is %i\n&amp;#34;, my_favorite_numbers[1]); // &amp;#34;The second element is 3&amp;#34; printf(&amp;#34;The fifth element is %i\n&amp;#34;, my_favorite_numbers[4]); // Undefined behavior, don&amp;#39;t do this!</description>
+      <description>Primitive Types The primitive types in JavaScript are number, string, boolean, undefined, and null.
+var num = 42; var str = &amp;#34;Hello, world!&amp;#34;; var bool = true; var undef; // an uninitialized variable has the value `undefined` var nul = null; These types map closely to how a developer would use them in a program: numbers are obviously for counting and arithmetic, strings for storing textual data, booleans for values that must be either true or false, undefined for variables that have not yet been initialized, and null for variables that explicitly do not contain a value.</description>
     </item>
     
     <item>
