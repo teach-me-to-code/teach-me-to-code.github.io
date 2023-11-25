@@ -4,28 +4,31 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <title>Hello, World!</title>
+  
+  <link rel="stylesheet" type="text/css" href="/global.css" />
+  <link rel="stylesheet" type="text/css" href="/syntax.css" />
+  <script async src="/main.js"></script>
 </head>
 
   <body>
     
-    <div class="container">
-      <nav class="navbar pl-0 pr-0">
+    <div id="global-container">
+      <nav>
   <a href="/">Christopher Fujino</a>
-
-  <ul class="nav ml-auto">
+  
+    <span>&#xE0B1;</span>
     
-      
-      <a class="nav-link" href="/blog">Blog</a>
+    <a href="/blog">Blog</a>
+  
+    <span>&#xE0B1;</span>
     
-      
-      <a class="nav-link" href="/tags/">Tags</a>
+    <a href="/tags">Tags</a>
+  
+    <span>&#xE0B1;</span>
     
-      
-      <a class="nav-link" href="/about/">About</a>
-    
-  </ul>
+    <a href="/resume">Résumé</a>
+  
 </nav>
 
       <main id="main">
@@ -42,9 +45,9 @@
 <p>Another advantage of generating static pages is that the site can be hosted for free on <a href="https://pages.github.com">GitHub Pages</a>. This means I don&rsquo;t have a manage a server and I can focus instead on what&rsquo;s most important, <em>the content</em>.</p>
 <h3 id="its-open-source-and-only-depends-on-nodejs--git">It&rsquo;s open-source and only depends on Node.js &amp; Git.</h3>
 <p>In order to use Jekyll, I had to install and configure Ruby, which isn&rsquo;t a part of normal workflow. The only dependencies Hexo requires are Node.js &amp; Git (I&rsquo;m actually using a lot of other open-source projects for this blog, but they&rsquo;re all managed with npm). I already use Node.js, so getting Hexo up &amp; running was as simple as executing:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ npm install -g hexo-cli
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ npm install -g hexo-cli
 $ hexo init project-name
-$ cd project-name
+$ <span class="nb">cd</span> project-name
 $ npm install
 $ hexo serve
 </code></pre></div><p>On a more philosophical note, as much as possible I try to use open-source software, and since I am currently focusing on JavaScript, I really wanted to use a tool that was written in JavaScript so that I could understand how it works and possibly even extend it down the line.</p>
@@ -55,16 +58,6 @@ $ hexo serve
 
       </main>
       <footer class="footer text-center mt-5 mb-4">
-  <div class="container">
-    Copyright &copy; 2022 Christopher Fujino
-  </div>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-    crossorigin="anonymous"></script>
 </footer>
 
     </div>

@@ -6,17 +6,7 @@
     <description>Recent content in Blogs on Teach Me To Code</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Teaching C to a JavaScript Developer, Redux</title>
-      <link>http://example.org/2021-05-30-teaching-c-to-a-js-dev-redux/</link>
-      <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/2021-05-30-teaching-c-to-a-js-dev-redux/</guid>
-      <description>Primitive Types The primitive types in JavaScript are number, string, boolean, undefined, and null.
-var num = 42; var str = &amp;#34;Hello, world!&amp;#34;; var bool = true; var undef; // an uninitialized variable has the value `undefined` var nul = null; These types map closely to how a developer would use them in a program: numbers are obviously for counting and arithmetic, strings for storing textual data, booleans for values that must be either true or false, undefined for variables that have not yet been initialized, and null for variables that explicitly do not contain a value.</description>
-    </item>
-    
+    <lastBuildDate>Thu, 13 Oct 2016 18:32:22 +0000</lastBuildDate><atom:link href="http://example.org/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sf.js</title>
       <link>http://example.org/2016-10-13-sfjs/</link>
