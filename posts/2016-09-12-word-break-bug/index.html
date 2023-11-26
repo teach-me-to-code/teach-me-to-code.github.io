@@ -34,7 +34,8 @@
       <main id="main">
         
 
-<h1>A CSS Word-break Bug</h1>
+<h1 style="display: inline-block">A CSS Word-break Bug</h1>
+<div style="display: inline-block"><em>Sep 09 2016</em></div>
 <p>So on <a href="https://teach-me-to-code.github.io/2016/07/21/Teaching-C-To-A-JS-Developer/">my last post</a>, I encountered a strange bug on Chrome (but not on Firefox) where some of my text was breaking mid-word, without so much as a hyphen inserted. Here&rsquo;s a screenshot:</p>
 <p>I&rsquo;m using <a href="https://hexo.io">the Hexo framework</a> for my blog, along with a theme from github called <a href="https://github.com/pinggod/hexo-theme-apollo">Apollo</a>, so I started reading through the SASS files, but couldn&rsquo;t isolate what exactly was causing this strange bug I&rsquo;d never encountered before.</p>
 <p>Several online searches, however, lead me to the <code>word-break</code> css property. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-break">According to MDN</a>, &ldquo;the <strong>word-break</strong> CSS property is used to specify whether to break lines within words.&rdquo; Sure enough, searching the SASS files for the Apollo theme, I found:</p>
