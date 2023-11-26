@@ -19,15 +19,15 @@
   
     <span>&#xE0B1;</span>
     
-    <a href="/blog">Blog</a>
+    <a href="/tags/">Tags</a>
   
     <span>&#xE0B1;</span>
     
-    <a href="/tags">Tags</a>
+    <a href="/resume/">Résumé</a>
   
     <span>&#xE0B1;</span>
     
-    <a href="/resume">Résumé</a>
+    <a href="/about/">About</a>
   
 </nav>
 
@@ -38,12 +38,12 @@
 <h2 id="primitive-types">Primitive Types</h2>
 <p>The primitive types in JavaScript are <code>number</code>, <code>string</code>, <code>boolean</code>,
 <code>undefined</code>, and <code>null</code>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&#34;Hello, world!&#34;</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">undef</span><span class="p">;</span> <span class="c1">// an uninitialized variable has the value `undefined`
-</span><span class="c1"></span><span class="kd">var</span> <span class="nx">nul</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-</code></pre></div><p>These types map closely to how a developer would use them in a program:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&#34;Hello, world!&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">undef</span><span class="p">;</span> <span class="c1">// an uninitialized variable has the value `undefined`
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">nul</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span></code></pre></div><p>These types map closely to how a developer would use them in a program:
 numbers are obviously for counting and arithmetic, strings for storing textual
 data, booleans for values that must be either true or false, undefined for
 variables that have not yet been initialized, and null for variables that
@@ -53,35 +53,35 @@ data is stored in memory. There are no strings, booleans (C99 technically
 added a boolean type, but these require a special header file and are largely
 synctactic sugar over )</p>
 <h2 id="pointers">Pointers</h2>
-<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-<span class="kt">int</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span>
-<span class="n">ptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>
-<span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&#34;i is %i</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span> <span class="c1">// &#34;i is 2&#34;
-</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">increment</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-  <span class="o">*</span><span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-<span class="n">increment</span><span class="p">(</span><span class="o">&amp;</span><span class="n">i</span><span class="p">);</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&#34;is is %i</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span> <span class="c1">// &#34;i is 2&#34;
-</span></code></pre></div><h2 id="arrays">Arrays</h2>
-<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="n">my_favorite_numbers</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">};</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&#34;The second element is %i</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">my_favorite_numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-  <span class="c1">// &#34;The second element is 3&#34;
-</span><span class="c1"></span><span class="n">printf</span><span class="p">(</span><span class="s">&#34;The fifth element is %i</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">my_favorite_numbers</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span>
-  <span class="c1">// Undefined behavior, don&#39;t do this!
-</span></code></pre></div><p>Array names are actually pointers to the first element:</p>
-<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="n">nums</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">};</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&#34;The first element is %i</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="n">nums</span><span class="p">);</span> <span class="c1">// &#34;The first element is 2&#34;
-</span><span class="c1"></span>
-<span class="c1">// These two lines are equivalent
-</span><span class="c1"></span><span class="n">printf</span><span class="p">(</span><span class="s">&#34;The third element is %i</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">nums</span> <span class="o">+</span> <span class="mi">2</span><span class="p">));</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&#34;The third element is %i</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">nums</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
-
-<span class="c1">// Undefined behavior, don&#39;t do this!
-</span><span class="c1"></span><span class="n">printf</span><span class="p">(</span><span class="s">&#34;The fifth element is %i</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">nums</span> <span class="o">+</span> <span class="mi">4</span><span class="p">));</span>
-</code></pre></div><p>When doing pointer arithmetic (e.g. <code>nums + 2</code>), the compiler knows how big the
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">ptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;i is %i</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span> <span class="c1">// &#34;i is 2&#34;
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">increment</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="o">*</span><span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">increment</span><span class="p">(</span><span class="o">&amp;</span><span class="n">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;is is %i</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span> <span class="c1">// &#34;i is 2&#34;
+</span></span></span></code></pre></div><h2 id="arrays">Arrays</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">my_favorite_numbers</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;The second element is %i</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">my_favorite_numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// &#34;The second element is 3&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;The fifth element is %i</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">my_favorite_numbers</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Undefined behavior, don&#39;t do this!
+</span></span></span></code></pre></div><p>Array names are actually pointers to the first element:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">nums</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;The first element is %i</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="n">nums</span><span class="p">);</span> <span class="c1">// &#34;The first element is 2&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// These two lines are equivalent
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;The third element is %i</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">nums</span> <span class="o">+</span> <span class="mi">2</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;The third element is %i</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">nums</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Undefined behavior, don&#39;t do this!
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;The fifth element is %i</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">nums</span> <span class="o">+</span> <span class="mi">4</span><span class="p">));</span>
+</span></span></code></pre></div><p>When doing pointer arithmetic (e.g. <code>nums + 2</code>), the compiler knows how big the
 underlying data type is (in the above example, <code>nums</code> points to <code>int</code>s), and
 thus knows how to increment past the current element that it is pointing to.
 However, it does <strong>not</strong> know the size of the array that was allocated, and thus
@@ -91,11 +91,11 @@ arrays to keep track of their size.</p>
 <h2 id="strings">Strings</h2>
 <p>In C, strings are arrays of characters that are terminated with a null-byte
 (<code>\0</code>).</p>
-<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">char</span> <span class="n">name</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&#34;Christopher&#34;</span><span class="p">;</span>
-
-<span class="n">printf</span><span class="p">(</span><span class="s">&#34;Hello %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span> <span class="c1">// &#34;Hello Christopher&#34;
-</span><span class="c1"></span><span class="n">printf</span><span class="p">(</span><span class="s">&#34;Last char code: %i</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">name</span><span class="p">[</span><span class="mi">11</span><span class="p">]);</span> <span class="c1">// &#34;Last char code: 0&#34;
-</span></code></pre></div><p>NOTE: all code samples tested with clang version 7.0.0.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">char</span> <span class="n">name</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&#34;Christopher&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Hello %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span> <span class="c1">// &#34;Hello Christopher&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Last char code: %i</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">name</span><span class="p">[</span><span class="mi">11</span><span class="p">]);</span> <span class="c1">// &#34;Last char code: 0&#34;
+</span></span></span></code></pre></div><p>NOTE: all code samples tested with clang version 7.0.0.</p>
 
 
 

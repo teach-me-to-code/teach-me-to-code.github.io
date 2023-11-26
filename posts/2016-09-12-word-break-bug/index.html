@@ -19,15 +19,15 @@
   
     <span>&#xE0B1;</span>
     
-    <a href="/blog">Blog</a>
+    <a href="/tags/">Tags</a>
   
     <span>&#xE0B1;</span>
     
-    <a href="/tags">Tags</a>
+    <a href="/resume/">Résumé</a>
   
     <span>&#xE0B1;</span>
     
-    <a href="/resume">Résumé</a>
+    <a href="/about/">About</a>
   
 </nav>
 
@@ -38,12 +38,12 @@
 <p>So on <a href="https://teach-me-to-code.github.io/2016/07/21/Teaching-C-To-A-JS-Developer/">my last post</a>, I encountered a strange bug on Chrome (but not on Firefox) where some of my text was breaking mid-word, without so much as a hyphen inserted. Here&rsquo;s a screenshot:</p>
 <p>I&rsquo;m using <a href="https://hexo.io">the Hexo framework</a> for my blog, along with a theme from github called <a href="https://github.com/pinggod/hexo-theme-apollo">Apollo</a>, so I started reading through the SASS files, but couldn&rsquo;t isolate what exactly was causing this strange bug I&rsquo;d never encountered before.</p>
 <p>Several online searches, however, lead me to the <code>word-break</code> css property. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-break">According to MDN</a>, &ldquo;the <strong>word-break</strong> CSS property is used to specify whether to break lines within words.&rdquo; Sure enough, searching the SASS files for the Apollo theme, I found:</p>
-<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="nt">a</span> <span class="p">{</span>
-  <span class="k">color</span><span class="p">:</span> <span class="mh">#42b983</span><span class="p">;</span>
-
-  <span class="k">word-break</span><span class="p">:</span> <span class="n">break-all</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div><p>MDN says that <code>break-all</code> specifies that &ldquo;word breaks may be inserted between any character for non-CJK (Chinese/Japanese/Korean) text.&rdquo; Sure enough, I realized the strange line breaks only occur during long anchor text. I&rsquo;m guessing this was specified to break up long URLs, however since I use descriptive text as my anchor text, I commented out this attribute and my text rendered as expected.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">a</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">color</span><span class="p">:</span> <span class="mh">#42b983</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">word-break</span><span class="p">:</span> <span class="n">break-all</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>MDN says that <code>break-all</code> specifies that &ldquo;word breaks may be inserted between any character for non-CJK (Chinese/Japanese/Korean) text.&rdquo; Sure enough, I realized the strange line breaks only occur during long anchor text. I&rsquo;m guessing this was specified to break up long URLs, however since I use descriptive text as my anchor text, I commented out this attribute and my text rendered as expected.</p>
 
 
 

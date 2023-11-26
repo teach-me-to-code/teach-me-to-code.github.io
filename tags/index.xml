@@ -2,125 +2,125 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Teach Me To Code</title>
-    <link>http://example.org/tags/</link>
+    <link>https://www.christopherfujino.com/tags/</link>
     <description>Recent content in Tags on Teach Me To Code</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Oct 2016 18:32:22 +0000</lastBuildDate><atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Oct 2016 18:32:22 +0000</lastBuildDate><atom:link href="https://www.christopherfujino.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JavaScript</title>
-      <link>http://example.org/tags/javascript/</link>
+      <link>https://www.christopherfujino.com/tags/javascript/</link>
       <pubDate>Thu, 13 Oct 2016 18:32:22 +0000</pubDate>
       
-      <guid>http://example.org/tags/javascript/</guid>
+      <guid>https://www.christopherfujino.com/tags/javascript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Meetups</title>
-      <link>http://example.org/tags/meetups/</link>
+      <link>https://www.christopherfujino.com/tags/meetups/</link>
       <pubDate>Thu, 13 Oct 2016 18:32:22 +0000</pubDate>
       
-      <guid>http://example.org/tags/meetups/</guid>
+      <guid>https://www.christopherfujino.com/tags/meetups/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CSS</title>
-      <link>http://example.org/tags/css/</link>
+      <link>https://www.christopherfujino.com/tags/css/</link>
       <pubDate>Mon, 12 Sep 2016 16:05:11 +0000</pubDate>
       
-      <guid>http://example.org/tags/css/</guid>
+      <guid>https://www.christopherfujino.com/tags/css/</guid>
       <description></description>
     </item>
     
     <item>
       <title>C</title>
-      <link>http://example.org/tags/c/</link>
+      <link>https://www.christopherfujino.com/tags/c/</link>
       <pubDate>Thu, 21 Jul 2016 17:52:14 +0000</pubDate>
       
-      <guid>http://example.org/tags/c/</guid>
+      <guid>https://www.christopherfujino.com/tags/c/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Programming Languages</title>
-      <link>http://example.org/tags/programming-languages/</link>
+      <link>https://www.christopherfujino.com/tags/programming-languages/</link>
       <pubDate>Thu, 21 Jul 2016 17:52:14 +0000</pubDate>
       
-      <guid>http://example.org/tags/programming-languages/</guid>
+      <guid>https://www.christopherfujino.com/tags/programming-languages/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ES6</title>
-      <link>http://example.org/tags/es6/</link>
+      <link>https://www.christopherfujino.com/tags/es6/</link>
       <pubDate>Sat, 09 Jul 2016 18:13:42 +0000</pubDate>
       
-      <guid>http://example.org/tags/es6/</guid>
+      <guid>https://www.christopherfujino.com/tags/es6/</guid>
       <description></description>
     </item>
     
     <item>
       <title>git</title>
-      <link>http://example.org/tags/git/</link>
+      <link>https://www.christopherfujino.com/tags/git/</link>
       <pubDate>Tue, 28 Jun 2016 17:24:21 +0000</pubDate>
       
-      <guid>http://example.org/tags/git/</guid>
+      <guid>https://www.christopherfujino.com/tags/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>http://example.org/tags/linux/</link>
+      <link>https://www.christopherfujino.com/tags/linux/</link>
       <pubDate>Tue, 28 Jun 2016 17:24:21 +0000</pubDate>
       
-      <guid>http://example.org/tags/linux/</guid>
+      <guid>https://www.christopherfujino.com/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>OS X</title>
-      <link>http://example.org/tags/os-x/</link>
+      <link>https://www.christopherfujino.com/tags/os-x/</link>
       <pubDate>Tue, 28 Jun 2016 17:24:21 +0000</pubDate>
       
-      <guid>http://example.org/tags/os-x/</guid>
+      <guid>https://www.christopherfujino.com/tags/os-x/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sysadmin</title>
-      <link>http://example.org/tags/sysadmin/</link>
+      <link>https://www.christopherfujino.com/tags/sysadmin/</link>
       <pubDate>Tue, 28 Jun 2016 17:24:21 +0000</pubDate>
       
-      <guid>http://example.org/tags/sysadmin/</guid>
+      <guid>https://www.christopherfujino.com/tags/sysadmin/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hexo</title>
-      <link>http://example.org/tags/hexo/</link>
+      <link>https://www.christopherfujino.com/tags/hexo/</link>
       <pubDate>Wed, 15 Jun 2016 16:11:47 +0000</pubDate>
       
-      <guid>http://example.org/tags/hexo/</guid>
+      <guid>https://www.christopherfujino.com/tags/hexo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>markdown</title>
-      <link>http://example.org/tags/markdown/</link>
+      <link>https://www.christopherfujino.com/tags/markdown/</link>
       <pubDate>Wed, 15 Jun 2016 16:11:47 +0000</pubDate>
       
-      <guid>http://example.org/tags/markdown/</guid>
+      <guid>https://www.christopherfujino.com/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>node.js</title>
-      <link>http://example.org/tags/node.js/</link>
+      <link>https://www.christopherfujino.com/tags/node.js/</link>
       <pubDate>Wed, 15 Jun 2016 16:11:47 +0000</pubDate>
       
-      <guid>http://example.org/tags/node.js/</guid>
+      <guid>https://www.christopherfujino.com/tags/node.js/</guid>
       <description></description>
     </item>
     
