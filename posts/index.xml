@@ -6,64 +6,53 @@
     <description>Recent content in Posts on Teach Me To Code</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Oct 2016 18:32:22 +0000</lastBuildDate><atom:link href="https://www.christopherfujino.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Oct 2016 18:32:22 +0000</lastBuildDate>
+    <atom:link href="https://www.christopherfujino.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sf.js</title>
       <link>https://www.christopherfujino.com/posts/2016-10-13-sfjs/</link>
       <pubDate>Thu, 13 Oct 2016 18:32:22 +0000</pubDate>
-      
       <guid>https://www.christopherfujino.com/posts/2016-10-13-sfjs/</guid>
       <description>I recently went to the Bay Area to visit my brother and got a chance to go to some meetups and mingle with the local nerdfolk. Here&amp;rsquo;s a summary of the meetups I attended and what I learned:
 Electron Meetup The first meetup was for the exciting new Node.js-based framework Electron. It lets you build desktop apps in HTML/CSS/JS and then distribute it to Windows/OS X/Linux. I&amp;rsquo;ve been playing around with it, so I was excited to hear more about it, especially since two of the presenters were from Github and part of the Electron team.</description>
     </item>
-    
     <item>
       <title>A CSS Word-break Bug</title>
       <link>https://www.christopherfujino.com/posts/2016-09-12-word-break-bug/</link>
       <pubDate>Mon, 12 Sep 2016 16:05:11 +0000</pubDate>
-      
       <guid>https://www.christopherfujino.com/posts/2016-09-12-word-break-bug/</guid>
       <description>So on my last post, I encountered a strange bug on Chrome (but not on Firefox) where some of my text was breaking mid-word, without so much as a hyphen inserted. Here&amp;rsquo;s a screenshot:
 I&amp;rsquo;m using the Hexo framework for my blog, along with a theme from github called Apollo, so I started reading through the SASS files, but couldn&amp;rsquo;t isolate what exactly was causing this strange bug I&amp;rsquo;d never encountered before.</description>
     </item>
-    
     <item>
       <title>Teaching C To A JavaScript Developer</title>
       <link>https://www.christopherfujino.com/posts/2016-07-21-teaching-c-to-a-js-developer/</link>
       <pubDate>Thu, 21 Jul 2016 17:52:14 +0000</pubDate>
-      
       <guid>https://www.christopherfujino.com/posts/2016-07-21-teaching-c-to-a-js-developer/</guid>
       <description>According to Douglas Crockford, JavaScript is the world&amp;rsquo;s most misunderstood programming language, and I am inclined to agree. Especially in the &amp;rsquo;90s, I think a lot of programmers first encountered JavaScript from a C/C++ or Java background (indeed, JavaScript-inventor Brendan Eich has said that he was tasked with creating Java&amp;rsquo;s little brother to run in the browser). I was one of them. We found the syntax very familiar. In fact, after reading a tutorial or two, I was able to write a slot machine game.</description>
     </item>
-    
     <item>
       <title>ES6 Maps, Weak Maps, and the Determinism of the JavaScript Garbage Collector</title>
       <link>https://www.christopherfujino.com/posts/2016-07-09-hash-maps-es6-maps-and-weak-maps/</link>
       <pubDate>Sat, 09 Jul 2016 18:13:42 +0000</pubDate>
-      
       <guid>https://www.christopherfujino.com/posts/2016-07-09-hash-maps-es6-maps-and-weak-maps/</guid>
       <description>Let&amp;rsquo;s say you have an app with a number of objects, and you&amp;rsquo;d like to store metadata about certain objects. How would you do this? What I&amp;rsquo;ve been doing is creating a special object for the purpose, like so:
 var x = { uniqueIdentifier : &amp;#34;this is my first object&amp;#34; }; var y = { uniqueIdentifier : &amp;#34;this is my second object&amp;#34; }; var registry = {}; registry[x.uniqueIdentifier] = &amp;#39;this object is okay&amp;#39;; registry[y.</description>
     </item>
-    
     <item>
       <title>Git, Dotfiles, and the Dream of a Truly Cross-Platform Work Environment</title>
       <link>https://www.christopherfujino.com/posts/2016-06-28-git-dotfiles-and-the-dream/</link>
       <pubDate>Tue, 28 Jun 2016 17:24:21 +0000</pubDate>
-      
       <guid>https://www.christopherfujino.com/posts/2016-06-28-git-dotfiles-and-the-dream/</guid>
       <description>So last October I started using Git to track my dotfiles and config files. Although it makes sense to use version control in case you make a change that breaks your system, to me the biggest appeal of doing this was so that I could easily synchronize all my config files between devices. My first commit included config files for npm and vim, and now it&amp;rsquo;s grown to include bash, window managers, and terminal emulators.</description>
     </item>
-    
     <item>
       <title>Hello, World!</title>
       <link>https://www.christopherfujino.com/posts/2016-06-15-hello-world/</link>
       <pubDate>Wed, 15 Jun 2016 16:11:47 +0000</pubDate>
-      
       <guid>https://www.christopherfujino.com/posts/2016-06-15-hello-world/</guid>
       <description>Most programming blogs feature posts from veteran programmers teaching others new concepts and techniques. However, I am a beginning programmer and I plan to blog about the things I&amp;rsquo;m learning and the difficulties I&amp;rsquo;m having. Hopefully I can help other beginning programmers, but more importantly I hope people will get involved and teach me to code!
 Why I Chose To Use Hexo Over the years, I&amp;rsquo;ve experimented with many different ways to manage a blog.</description>
     </item>
-    
   </channel>
 </rss>

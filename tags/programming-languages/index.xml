@@ -6,15 +6,14 @@
     <description>Recent content in Programming Languages on Teach Me To Code</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Jul 2016 17:52:14 +0000</lastBuildDate><atom:link href="https://www.christopherfujino.com/tags/programming-languages/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Jul 2016 17:52:14 +0000</lastBuildDate>
+    <atom:link href="https://www.christopherfujino.com/tags/programming-languages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Teaching C To A JavaScript Developer</title>
       <link>https://www.christopherfujino.com/posts/2016-07-21-teaching-c-to-a-js-developer/</link>
       <pubDate>Thu, 21 Jul 2016 17:52:14 +0000</pubDate>
-      
       <guid>https://www.christopherfujino.com/posts/2016-07-21-teaching-c-to-a-js-developer/</guid>
       <description>According to Douglas Crockford, JavaScript is the world&amp;rsquo;s most misunderstood programming language, and I am inclined to agree. Especially in the &amp;rsquo;90s, I think a lot of programmers first encountered JavaScript from a C/C++ or Java background (indeed, JavaScript-inventor Brendan Eich has said that he was tasked with creating Java&amp;rsquo;s little brother to run in the browser). I was one of them. We found the syntax very familiar. In fact, after reading a tutorial or two, I was able to write a slot machine game.</description>
     </item>
-    
   </channel>
 </rss>
