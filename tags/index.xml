@@ -6,13 +6,55 @@
     <description>Recent content in Tags on Teach Me To Code</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Oct 2016 18:32:22 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 Dec 2023 00:09:00 +0000</lastBuildDate>
     <atom:link href="https://www.christopherfujino.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go</title>
+      <link>https://www.christopherfujino.com/tags/go/</link>
+      <pubDate>Fri, 29 Dec 2023 00:09:00 +0000</pubDate>
+      <guid>https://www.christopherfujino.com/tags/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>hexo</title>
+      <link>https://www.christopherfujino.com/tags/hexo/</link>
+      <pubDate>Fri, 29 Dec 2023 00:09:00 +0000</pubDate>
+      <guid>https://www.christopherfujino.com/tags/hexo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>hugo</title>
+      <link>https://www.christopherfujino.com/tags/hugo/</link>
+      <pubDate>Fri, 29 Dec 2023 00:09:00 +0000</pubDate>
+      <guid>https://www.christopherfujino.com/tags/hugo/</guid>
+      <description></description>
+    </item>
     <item>
       <title>JavaScript</title>
       <link>https://www.christopherfujino.com/tags/javascript/</link>
-      <pubDate>Thu, 13 Oct 2016 18:32:22 +0000</pubDate>
+      <pubDate>Fri, 29 Dec 2023 00:09:00 +0000</pubDate>
       <guid>https://www.christopherfujino.com/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>jekyll</title>
+      <link>https://www.christopherfujino.com/tags/jekyll/</link>
+      <pubDate>Fri, 29 Dec 2023 00:09:00 +0000</pubDate>
+      <guid>https://www.christopherfujino.com/tags/jekyll/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>node.js</title>
+      <link>https://www.christopherfujino.com/tags/node.js/</link>
+      <pubDate>Fri, 29 Dec 2023 00:09:00 +0000</pubDate>
+      <guid>https://www.christopherfujino.com/tags/node.js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ruby</title>
+      <link>https://www.christopherfujino.com/tags/ruby/</link>
+      <pubDate>Fri, 29 Dec 2023 00:09:00 +0000</pubDate>
+      <guid>https://www.christopherfujino.com/tags/ruby/</guid>
       <description></description>
     </item>
     <item>
@@ -79,24 +121,10 @@
       <description></description>
     </item>
     <item>
-      <title>hexo</title>
-      <link>https://www.christopherfujino.com/tags/hexo/</link>
-      <pubDate>Wed, 15 Jun 2016 16:11:47 +0000</pubDate>
-      <guid>https://www.christopherfujino.com/tags/hexo/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>markdown</title>
       <link>https://www.christopherfujino.com/tags/markdown/</link>
       <pubDate>Wed, 15 Jun 2016 16:11:47 +0000</pubDate>
       <guid>https://www.christopherfujino.com/tags/markdown/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>node.js</title>
-      <link>https://www.christopherfujino.com/tags/node.js/</link>
-      <pubDate>Wed, 15 Jun 2016 16:11:47 +0000</pubDate>
-      <guid>https://www.christopherfujino.com/tags/node.js/</guid>
       <description></description>
     </item>
   </channel>

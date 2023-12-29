@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Relaunching my Website</title>
+  
+  
+    
+      
+        <link rel="stylesheet" type="text/css" href="https://www.christopherfujino.com/global-style.min.css" />
+      
+    
+  
+  
+  <link rel="stylesheet" type="text/css" href="https://www.christopherfujino.com/syntax.min.6bc21cbdc8ed877a4427d6134f93f47b26a9e3833080d65a82fd82f51a9aaddc.css" />
+  
+    <script src="https://www.christopherfujino.com/main.min.1cb6b20d5de3e3263ce25a4f162e754ce9c90647acb1867c5e64a770d7b46357.js"></script>
+  
+</head>
+
+  <body>
+    
+    <div id="global-container">
+      <nav>
+  <a href="/">Christopher Fujino</a>
+  
+    <span>&#xE0B1;</span>
+    
+    <a href="/tags/">Tags</a>
+  
+    <span>&#xE0B1;</span>
+    
+    <a href="/resume/">Résumé</a>
+  
+    <span>&#xE0B1;</span>
+    
+    <a href="/about/">About</a>
+  
+</nav>
+
+      <main id="main">
+        
+
+<h1 style="display: inline-block">Relaunching my Website</h1>
+<div style="display: inline-block"><em>Dec 12 2023</em></div>
+<p>So, I have been a bad blogger.</p>
+<p>It has been over 7 years since my
+<a href="/posts/2016-10-13-sfjs/">last post</a>. At that time, coding
+was a hobby I was interested in growing into my full-time profession. I used
+my blog as a journal of what I learned. I called it <em>Teach Me to Code</em> because
+I saw it as a journal of a learner and I imagined more experienced coders
+might interact and offer me insights. It seemed arbitrary to me that bloggers
+needed to take the posture of an expert sharing their wisdom with the world.
+And even if I agreed with that presupposition, I did not have any wisdom to
+share.</p>
+<p>Since then, I moved to the San Francisco Bay Area and coding went from being
+a hobby to my career (see my <a href="/resume/">résumé</a> for more
+details on what I&rsquo;ve been up to). It&rsquo;s always been in the back of my mind that
+I would like to start blogging again. As often happens to me, however, when I
+intend to work on a side project (which in this case would be re-launching my
+blog), I start working on the project but I end up getting lost down the rabbit
+hole of tooling and frameworks available to build the project with. This
+usually ends up with me building my own framework&ndash;fortunately this story has
+a happier ending.</p>
+<h2 id="static-site-generators">Static Site Generators</h2>
+<p>My initial idea for starting a blog began when I heard about GitHub Pages and
+the concept of static site generators. If you&rsquo;re not familiar with static site
+generators, let me explain it with a short timeline of blog architecture:</p>
+<ol>
+<li>Early blogs were made up of hand-written HTML documents. Writing a new post
+meant creating a new HTML document, linking to it from some index page, and
+syncing both the new post and the updated index to your server, preferably via
+ftp. This has the advantage of being incredibly simple and cheap to host (the
+entire website is composed of static assets).</li>
+<li>Needing to author posts as complete HTML documents was both cumbersome and
+precluded non-programmers from blogging. Blog platforms were developed that
+stored posts in a database and dynamically generated HTML documents from them
+when users requested them. This made it easier to author content and publish
+it, at the cost of greater demands on the server (both to maintain the
+database and to dynamically generate the HTML content).</li>
+</ol>
+<p>In summary, completely static websites were simple and cheap to host and
+faster to serve while dynamic websites made authoring and publishing new
+content easier.</p>
+<p>Static site generators take a third approach: like dynamic websites, they
+allow content to be authored in a more accessible format (usually markdown);
+however, generating the HTML content is happened ahead of time by the author,
+with a &ldquo;build&rdquo; step (conceptually this can be thought of as &ldquo;compiling&rdquo; the
+website, where the inputs are configuration files, templates, assets, and the
+markdown content files and the outputs are the static HTML, CSS, JavaScript,
+and asset files), after which the generated HTML is published to the
+server, as with static websites. This combines the ease of authoring content
+with the speed of cost efficiency of static websites (GitHub Pages still
+offers free static web hosting, and as of December 2023 is the way this
+website is hosted).</p>
+<p>So what is the catch? The downside of this approach is that there is added
+complexity in terms of the tooling used to build the website. Throughout the
+years, I&rsquo;ve tried Jekyll (in Ruby), Hexo (in JavaScript, detailed in my <a href="/posts/2016-06-15-hello-world/">first
+blog post</a>, and Hugo (in Go).
+Each of these had the usual problems and complexities associated with using
+an application framework in the given ecosystem. Although it is true that
+<em>writing content</em> is fairly straightforward with a static site generator,
+initially bootstrapping and tweaking a Jekyll blog is roughly equivalent to
+the amount of work it would take to bootstrap a Ruby on Rails application of
+similar complexity. That is to say, a tedious task that could easily kill any
+creativity from the author.</p>
+<p>As I alluded to earlier, I have considered building my own static site
+generator framework in alignment with my own philosophy of software
+development. In a moment of clarity, however, I concluded that should I start
+working on a static site generator framework, I will most likely never
+actually end up building a website. Thus, when I picked up working on this
+website again in November of 2023, I decided to just stick with the last
+framework that I had set up, which was Hugo.</p>
+<h2 id="aesthetics">Aesthetics</h2>
+<p>The easiest way to minimize the bootstrapping time with a static site
+generator is to use a pre-made theme. While I have used themes before, I have
+never been fully satisfied with them because:</p>
+<ol>
+<li>I have never found a free theme that I felt fully matched my aesthetic; and</li>
+<li>If I did find one, it would probably bother me that other blogs out there
+are likely using the same theme.</li>
+</ol>
+<p>I have never been a visual designer and when it comes to programming
+front-end development is my biggest weakness. In my current job, I work on a
+command line interface tool, which I believe plays to my strengths. And my
+aesthetics. Other than a web browser, the rest of the tools that I use daily
+are command line tools in my terminal. I&rsquo;ve spent a considerable mount of time
+styling my terminal environment to be aesthetically pleasing. Given that you
+are reading my website now, I think you can see where this is going.</p>
+<p>So I hand-wrote my own
+<a href="https://github.com/christopherfujino/teach-me-to-code/tree/master/blog/assets/global.css">stylesheet</a>
+to look as close as possible to my terminal environment, including the
+<a href="https://github.com/madmalik/mononoki">mononoki</a> font and the
+base16 <a href="https://github.com/chriskempson/base16-default-schemes/blob/master/eighties.yaml">eighties</a> colorscheme.
+Although writing CSS rules is something I&rsquo;ve happily been able to avoid for
+the most part in my professional career, I found it to be much more satisfying
+within such a strict set of constraints (e.g. only one font size allowed, all
+spacing should be in multiples of that single font size, all colors used
+should be within the finite set from the colorscheme). I think this aligns
+overall with my philosophy of software development, that a strict set of
+principled constraints makes writing code simpler, more logical, and safer.
+Thus my predilection for statically-typed languages, strict linter rules, and
+powerful compilers.</p>
+<h2 id="continuous-deployment">Continuous Deployment</h2>
+<p>The simplest solution to manage deployment of a statically-generated website
+to GitHub Pages would be to generate the static content locally on my
+workstation, commit that to my git repository, and push the commit to the
+GitHub repository that had GitHub Pages configured. From there, GitHub would
+handle serving the content.</p>
+<p>I decided against this because:</p>
+<ol>
+<li>Committing both source inputs and generated outputs into a repository
+wastes storage space in the repository.</li>
+<li>Likewise, it can lead to surprising cases if I forget to generate the
+outputs before committing where the inputs and outputs do not match at that
+particular commit.</li>
+<li>The exact contents of the generated outputs may be dependent on the exact
+versions of the generator toolchain I had installed on that particular
+computer.</li>
+</ol>
+<p>I will likely expand on these ideas in a future post specifically on CI/CD.</p>
+<p>For these reasons, I decided to only commit the source inputs to my
+repository, and rely on a continuous deployment script to actually publish
+the generated static output content. The workflow looks like:</p>
+<ol>
+<li>Pull the latest version of the source repository from <a href="https://github.com/christopherfujino/teach-me-to-code">https://github.com/christopherfujino/teach-me-to-code</a></li>
+<li>Write the post, using Hugo&rsquo;s local development server to preview what it
+will look like as the rendered HTML</li>
+<li>When ready, commit the post and push it back up to <a href="https://github.com/christopherfujino/teach-me-to-code">https://github.com/christopherfujino/teach-me-to-code</a></li>
+<li>On pushes to the <code>master</code> branch, a GitHub Action
+workflow will trigger, which will then:</li>
+<li>Pull the pinned Docker image <code>golang:1.21.4-bookworm</code>, which is the
+official Go docker image, using Debian</li>
+<li>Use GitHub&rsquo;s official <code>actions/checkout@4.1.1</code> to check out the source
+repository</li>
+<li>Build the Hugo framework from source, using a commit pinned as a git
+submodule</li>
+<li>Use newly built Hugo binary to build the website</li>
+<li>Use the third party GitHub Action
+<a href="https://github.com/appleboy/gh-pages-action/releases/tag/v0.0.2">appleboy/gh-pages-action@v0.0.2</a>
+to push the generated static outputs to a <em>second</em> GitHub
+<a href="https://github.com/teach-me-to-code/teach-me-to-code.github.io">repository</a>,
+which then has GitHub pages configured on it (which my domain name points to)</li>
+</ol>
+<p>Is this more complicated than is necessary for a publishing a static website?
+Probably. However, I was willing to go through the extra time to set up the
+CI/CD infrastructure for the assurance that my website builds would be
+completely reproducible. In addition, it was an excuse to familiarize myself
+with GitHub Actions. More thoughts on this are likely to follow in their own
+post, likely with a provocative title like <em>How I Would Publish a Malicious
+GitHub Action</em>.</p>
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+<p>It&rsquo;s now clear to me that I procrastinated on working on my website because
+I am a perfectionist with strong ideas about things <em>should</em> be and I am
+easily discouraged when I fail to achieve this. The idea to fit the design
+of the website within constraints of a terminal emulator was able to limit
+the scope and also provide the inspiration needed to focus my attention
+enough to get the website to a point where I was <em>reasonable satisfied</em>
+(is a perfectionist ever happy?).</p>
+<p>Although this blog post details the technical problems I struggled to
+overcome as a perfectionist, I similarly struggled creatively to finish blog
+posts. Time will tell if I can break through this barrier.</p>
+
+
+
+      </main>
+      <footer class="footer text-center mt-5 mb-4" style="display: none;">
+  <span>$ </span><span id=terminal-input></span><span class=cursor-blink>&#x2588;</span>
+</footer>
+
+    </div>
+  </body>
+</html>
