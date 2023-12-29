@@ -44,7 +44,8 @@
         
 
 <h1 style="display: inline-block">ES6 Maps, Weak Maps, and the Determinism of the JavaScript Garbage Collector</h1>
-<div style="display: inline-block"><em>Jul 07 2016</em></div>
+<div style="display: inline-block"><em>Jul 09 2016</em></div>
+
 <p>Let&rsquo;s say you have an app with a number of objects, and you&rsquo;d like to store metadata about certain objects. How would you do this? What I&rsquo;ve been doing is creating a special object for the purpose, like so:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">uniqueIdentifier</span> <span class="o">:</span> <span class="s2">&#34;this is my first object&#34;</span> <span class="p">};</span>
 </span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">uniqueIdentifier</span> <span class="o">:</span> <span class="s2">&#34;this is my second object&#34;</span> <span class="p">};</span>
