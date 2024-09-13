@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Declaration vs. Assignment</title>
+  
+  
+    
+      
+        <link rel="stylesheet" type="text/css" href="https://www.christopherfujino.com/global-style.min.css" />
+      
+    
+  
+  
+  <link rel="stylesheet" type="text/css" href="https://www.christopherfujino.com/syntax.min.6bc21cbdc8ed877a4427d6134f93f47b26a9e3833080d65a82fd82f51a9aaddc.css" />
+  
+    <script src="https://www.christopherfujino.com/main.min.1cb6b20d5de3e3263ce25a4f162e754ce9c90647acb1867c5e64a770d7b46357.js"></script>
+  
+</head>
+
+  <body>
+    
+    <div id="global-container">
+      <nav>
+  <a href="/">Christopher Fujino</a>
+  
+    <span>&#xE0B1;</span>
+    
+    <a href="/tags/">Tags</a>
+  
+    <span>&#xE0B1;</span>
+    
+    <a href="/resume/">Résumé</a>
+  
+    <span>&#xE0B1;</span>
+    
+    <a href="/recommendations/">Recommendations</a>
+  
+    <span>&#xE0B1;</span>
+    
+    <a href="/about/">About</a>
+  
+</nav>
+
+      <main id="main">
+        
+
+<h1 style="display: inline-block">Declaration vs. Assignment</h1>
+<div style="display: inline-block"><em>Jul 16 2024</em></div>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># UnboundLocalError: local variable &#39;x&#39; referenced before assignment</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">func</span><span class="p">()</span>
+</span></span></code></pre></div><p>In this example, even though the declaration <code>x = 1</code> appears before we try to
+print the expression <code>x</code>, we hit a <code>NameError</code> because the particular path
+through the code that we took never hit that branch, <code>x</code> was never declared
+and thus our error.</p>
+<p>Before we continue with our examples, if you are asking &ldquo;why would anyone
+write that code?&rdquo; then that is a fair question, it is silly code. It is an
+over-simplification to make the features of language more obvious. A more
+real-world example of the same concept would be:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">makeRequest</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">response</span> <span class="o">=</span> <span class="n">makeNetworkCall</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="k">except</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">logger</span><span class="p">(</span><span class="s2">&#34;The network call failed!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># UnboundLocalError: local variable &#39;response&#39; referenced before assignment</span>
+</span></span><span class="line"><span class="cl">  <span class="n">logger</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</span></span></code></pre></div><p>If <code>makeNetworkCall</code> could possibly throw, we may or may not have ever
+assigned a value to the local variable <code>response</code>.</p>
+<p>Now, returning to our simpler example (although the solution is the same),
+how do we fix our code so that we never hit this error? There are several
+methods, but the simplest would be to ensure that <code>x</code> is <em>always</em> assigned
+(that is, there is no possible branch that will avoid it being assigned)
+before we try to access its value:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># None</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">func</span><span class="p">()</span>
+</span></span></code></pre></div><p>Now what happens if I decide to more eagerly initialize <code>x</code>&ndash;in fact, at the
+beginning of my program?</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># UnboundLocalError: local variable &#39;x&#39; referenced before assignment</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">func</span><span class="p">()</span>
+</span></span></code></pre></div><p>Why do we get our <code>UnboundLocalError</code> again? We have certainly initialized <code>x</code>
+before attempting to reference it. Well, notice the error message claims that
+<code>x</code> is a local variable. Because Python does not have an explicit variable
+declaration keyword (such as <code>var</code>), it could be ambiguous whether the
+statement <code>x = 1</code> is a <em>declaration</em> of a new variable <code>x</code> that is initialized
+to the value <code>1</code>, or if it is the <em>re-assignment</em> of the global variable <code>x</code>
+that we declared at the beginning of our program. Thus, by default, these
+statements within a function declare a new variable that <em>shadows</em> the previous
+one from the greater scope.</p>
+<p>As an example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># 0</span>
+</span></span><span class="line"><span class="cl"><span class="n">func</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># 0</span>
+</span></span></code></pre></div><p>Within the function <code>func()</code>, the name <code>x</code> is a local variable, and thus it
+does not change the global variable <code>x</code>. If we do <em>not</em> want to shadow the
+previous variable with our own local, we must use the keyword <code>global</code> to
+explicitly tell the Python runtime that&ndash;within the current function&ndash;the name
+that we provide should refer to the variable already existing in the outer
+scope:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># 0</span>
+</span></span><span class="line"><span class="cl"><span class="n">func</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># 1</span>
+</span></span></code></pre></div>
+
+
+      </main>
+      <footer class="footer text-center mt-5 mb-4" style="display: none;">
+  <span>$ </span><span id=terminal-input></span><span class=cursor-blink>&#x2588;</span>
+</footer>
+
+    </div>
+  </body>
+</html>
