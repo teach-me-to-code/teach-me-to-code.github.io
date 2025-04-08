@@ -6,16 +6,8 @@
     <description>Recent content on Teach Me To Code</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 Dec 2023 00:09:00 +0000</lastBuildDate>
     <atom:link href="https://www.christopherfujino.com/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Declaration vs. Assignment</title>
-      <link>https://www.christopherfujino.com/posts/2024-07-16-declaration-vs-assignment/</link>
-      <pubDate>Tue, 16 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.christopherfujino.com/posts/2024-07-16-declaration-vs-assignment/</guid>
-      <description>def func(): if False: x = 1 print(x) # UnboundLocalError: local variable &amp;#39;x&amp;#39; referenced before assignment func() In this example, even though the declaration x = 1 appears before we try to print the expression x, we hit a NameError because the particular path through the code that we took never hit that branch, x was never declared and thus our error.
-Before we continue with our examples, if you are asking &amp;ldquo;why would anyone write that code?</description>
-    </item>
     <item>
       <title>Relaunching my Website</title>
       <link>https://www.christopherfujino.com/posts/2023-11-25-relaunching-my-website/</link>
