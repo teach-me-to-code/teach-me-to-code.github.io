@@ -23,5 +23,12 @@
       <description>Primitive Types The primitive types in JavaScript are number, string, boolean, undefined, and null.
 var num = 42; var str = &amp;#34;Hello, world!&amp;#34;; var bool = true; var undef; // an uninitialized variable has the value `undefined` var nul = null; These types map closely to how a developer would use them in a program: numbers are obviously for counting and arithmetic, strings for storing textual data, booleans for values that must be either true or false, undefined for variables that have not yet been initialized, and null for variables that explicitly do not contain a value.</description>
     </item>
+    <item>
+      <title></title>
+      <link>https://www.christopherfujino.com/drafts/fp1-state/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.christopherfujino.com/drafts/fp1-state/</guid>
+      <description>for (int i = 0; i &amp;lt; 10; i++) { printf(&amp;#34;%d\n&amp;#34;, i); } void printTenTimes(int i) { if (i &amp;lt; 10) { printf(&amp;#34;%d\n&amp;#34;, i); printTenTimes(i + 1); } } int main() { printTenTimes(0); } </description>
+    </item>
   </channel>
 </rss>
