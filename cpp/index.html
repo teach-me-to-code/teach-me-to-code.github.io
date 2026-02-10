@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title></title>
+  
+  
+    
+      
+        <link rel="stylesheet" type="text/css" href="https://www.christopherfujino.com/global-style.min.css" />
+      
+    
+  
+  
+  <link rel="stylesheet" type="text/css" href="https://www.christopherfujino.com/syntax.min.6bc21cbdc8ed877a4427d6134f93f47b26a9e3833080d65a82fd82f51a9aaddc.css" />
+  
+    <script src="https://www.christopherfujino.com/main.min.6a73a9deb2370afa158e0c66b4c27b9297f1eaca43d31c03e6ad78ffd9c4cd12.js"></script>
+  
+</head>
+
+  <body>
+    
+    <div id="global-container">
+      <nav>
+  <a href="/">Christopher Fujino</a>
+  
+    <span>&#xE0B1;</span>
+    
+    <a href="/tags/">Tags</a>
+  
+    <span>&#xE0B1;</span>
+    
+    <a href="/resume/">Résumé</a>
+  
+    <span>&#xE0B1;</span>
+    
+    <a href="/recommendations/">Recommendations</a>
+  
+    <span>&#xE0B1;</span>
+    
+    <a href="/about/">About</a>
+  
+</nav>
+
+      <main id="main">
+        
+
+<h1></h1>
+<p>I feel like I have finally wrapped my mind around the C++ programming language:
+it is an incredibly sophisticated C code generator.</p>
+<p>I know that modern compilers are not literally generating C code; however, the
+runtime model of C++ code is (as far as I know) very similar to that of C. Most
+features of C++ fall into the category of &ldquo;you could do that in C, but it would
+be very tedious, repetitive, and error-prone.&rdquo;</p>
+<p>The most obvious feature that lines up with my &ldquo;sophisticated code generator&rdquo;
+conceit would be templating: it is literally generating valid C++ code from the
+templates, albeit as part of the compilation process and probably directly into
+some abstract format (apparently there is <a href="https://stackoverflow.com/questions/4448094/can-we-see-the-templates-instantiated-by-the-c-compiler">a clang++ flag to print it</a>).
+The only reason I even mention templates is because many other important
+features of C++ build upon it (e.g. smart pointers, STL containers, iterators).</p>
+<p>But let&rsquo;s now look at probably the core distinguishing (from its ancestor C)
+feature of C++, classes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Buffer</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">bytes</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Hello, world!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+
+
+      </main>
+      <footer class="footer text-center mt-5 mb-4" style="display: none;">
+  <span>$ </span><span id=terminal-input></span><span class=cursor-blink>&#x2588;</span>
+</footer>
+
+    </div>
+  </body>
+</html>
