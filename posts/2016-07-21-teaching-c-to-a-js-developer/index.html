@@ -1,3 +1,5 @@
+<!-- layouts/baseof.html -->
+
 <!doctype html>
 <html lang="en">
   
@@ -14,7 +16,7 @@
     
   
   
-  <link rel="stylesheet" type="text/css" href="https://www.christopherfujino.com/syntax.min.6bc21cbdc8ed877a4427d6134f93f47b26a9e3833080d65a82fd82f51a9aaddc.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.christopherfujino.com/syntax.min.181cc7aa9e2a5673cf96229051b1112595e382e2a391bca88c3a4599ba9c6f4f.css" />
   
     <script src="https://www.christopherfujino.com/main.min.6a73a9deb2370afa158e0c66b4c27b9297f1eaca43d31c03e6ad78ffd9c4cd12.js"></script>
   
@@ -58,8 +60,8 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kt">float</span> <span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159</span>
 </span></span><span class="line"><span class="cl"><span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="sc">&#39;C&#39;</span><span class="p">;</span> <span class="c1">// this is a character variable, it can only hold a single character
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">char</span> <span class="n">string</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#34;Hello, world!&#34;</span><span class="p">;</span>  <span class="c1">// this is a string, or an array of characters
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">array</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="p">};</span> <span class="c1">// this is an array
+</span></span></span><span class="line"><span class="cl"><span class="kt">char</span> <span class="n">string</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#34;Hello, world!&#34;</span><span class="p">;</span>  <span class="c1">// this is a string, or an array of characters
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">array</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="p">};</span> <span class="c1">// this is an array
 </span></span></span></code></pre></div><p>Variables don&rsquo;t have to be initialized when they&rsquo;re declared, but they have to be declared with a keyword corresponding to their type. Some important distinctions between JavaScript:</p>
 <ol>
 <li>Integers and floats are separate types. There are other number types, such as <code>unsigned int</code> for unsigned integers, or <code>long int</code> for 32-bit integers, but for most cases integers and floats are sufficient.</li>
@@ -78,10 +80,10 @@
 </span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%i</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>  <span class="c1">// will print out &#34;3&#34;, the local block value
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
+</span></span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="nf">func</span><span class="p">();</span> <span class="c1">// will print out &#34;1&#34;, global value
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">func</span><span class="p">()</span> <span class="p">{</span>
@@ -95,15 +97,15 @@
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="o">*</span><span class="n">pointer</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%i&#34;</span><span class="p">,</span> <span class="n">pointer</span><span class="p">);</span>  <span class="c1">// this will return a memory address, not sure what it will be
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%i&#34;</span><span class="p">,</span> <span class="o">*</span><span class="n">pointer</span><span class="p">);</span> <span class="c1">// this will turn 5, where pointer points to
+</span></span></span><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%i&#34;</span><span class="p">,</span> <span class="o">*</span><span class="n">pointer</span><span class="p">);</span> <span class="c1">// this will turn 5, where pointer points to
 </span></span></span></code></pre></div><p>Printing a memory address to standard output is not very helpful. However, using pointers is helpful in passing larger data structures like arrays to a function. In fact, under the hood, this is similar to how JavaScript passes objects to functions. Pointers can also be used to change the value of a variable within an external function. Without pointers, variables are passed to functions by value. For example:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">pointer</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="nf">func</span><span class="p">(</span><span class="n">pointer</span><span class="p">);</span>  <span class="c1">// here the address is passed to the function
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%i</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="n">pointer</span><span class="p">);</span> <span class="c1">// value is now 3
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></span><span class="line"><span class="cl">  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%i</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="n">pointer</span><span class="p">);</span> <span class="c1">// value is now 3
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">func</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="o">*</span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
@@ -111,28 +113,28 @@
 </span></span></code></pre></div><p>As noted earlier, arrays are not really a built-in type in C. Actually, array notation is just a shorthand for a pointer which accesses adjacent locations in memory. For instance if you create a string of 8 characters, those characters will all be stored next to each other in memory. It&rsquo;s important to note, also, that the name of an array (or string) by itself will refer to the address of its first element. Thus a pointer can be assigned to an array like so: <code>pointer = array;</code>. This pointer will now point to the address of the first element. A neat trick is that since the memory locations in an array are adjacent, the increment operator <code>++</code> will increment through the elements of the array. For example:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="kt">char</span> <span class="n">string</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&#34;Hello, world!&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kt">char</span> <span class="o">*</span><span class="n">pointer</span> <span class="o">=</span> <span class="n">string</span><span class="p">;</span> <span class="c1">// pointer assigned to address of string
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">while</span><span class="p">(</span><span class="o">*</span><span class="n">pointer</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// while our pointer still points to a valid character
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%c&#34;</span><span class="p">,</span> <span class="o">*</span><span class="n">pointer</span><span class="p">);</span> <span class="c1">// print out the contents the pointer points to
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">pointer</span><span class="o">++</span><span class="p">;</span>  <span class="c1">// point to the next location in memory
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">while</span><span class="p">(</span><span class="o">*</span><span class="n">pointer</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// while our pointer still points to a valid character
+</span></span></span><span class="line"><span class="cl">  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%c&#34;</span><span class="p">,</span> <span class="o">*</span><span class="n">pointer</span><span class="p">);</span> <span class="c1">// print out the contents the pointer points to
+</span></span></span><span class="line"><span class="cl">  <span class="n">pointer</span><span class="o">++</span><span class="p">;</span>  <span class="c1">// point to the next location in memory
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>This code will print out characters of the string one by one. The while-loop works because in C, strings are terminated with a <code>null</code> character.</p>
 <h3 id="memory-allocation">Memory Allocation</h3>
 <p>In JavaScript, memory management is automated. When you make an array bigger in JavaScript, the additional memory is allocated for you. When variables are no longer referenced, they are garbage collected for you.</p>
 <p>In C, you have to handle this yourself. Let&rsquo;s say you have a program that creates an array of <code>x</code> integers, where <code>x</code> is a count read from the user. We cannot initialize the array in our code, because we do not know what size to make it before runtime. The <code>malloc</code> function, specified by the <code>malloc.h</code> header file, will allocate memory of a specified size from the heap, and return an address to it. For example:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// this will be the size of our string
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kt">char</span> <span class="o">*</span><span class="n">initial</span><span class="p">;</span>  <span class="c1">// this will point to the beginning of our string
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">  <span class="kt">char</span> <span class="o">*</span><span class="n">initial</span><span class="p">;</span>  <span class="c1">// this will point to the beginning of our string
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;How big of a string would you like? &#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%i&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">size</span><span class="p">);</span> <span class="c1">// read an integer from input, and store in size
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">initial</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="nf">malloc</span><span class="p">(</span><span class="n">size</span><span class="p">);</span> <span class="c1">// allocate a string of &#34;size&#34; length
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kt">char</span> <span class="o">*</span><span class="n">increment</span> <span class="o">=</span> <span class="n">initial</span><span class="p">;</span>  <span class="c1">// this pointer will move through the string
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">  <span class="n">initial</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="nf">malloc</span><span class="p">(</span><span class="n">size</span><span class="p">);</span> <span class="c1">// allocate a string of &#34;size&#34; length
+</span></span></span><span class="line"><span class="cl">  <span class="kt">char</span> <span class="o">*</span><span class="n">increment</span> <span class="o">=</span> <span class="n">initial</span><span class="p">;</span>  <span class="c1">// this pointer will move through the string
+</span></span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="o">*</span><span class="n">increment</span> <span class="o">=</span> <span class="sc">&#39;!&#39;</span><span class="p">;</span> <span class="c1">// fill the string with exclamation points
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">increment</span><span class="o">++</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">    <span class="n">increment</span><span class="o">++</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">initial</span><span class="p">);</span>  <span class="c1">// print out the string
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>This can potentially lead to memory leaks, if your application continues to allocate for itself more and more memory. It is up to the programmer to keep track of this memory that has been allocated, and then free it when it is no longer used. This is done with the <code>free()</code> function, which takes a pointer to the allocated chunk as its argument. E.g.</p>
@@ -149,10 +151,10 @@
 <p>The classic example of the limitations of C is the buffer overrun. Because arrays in C basically use a pointer to look at consecutive addresses in memory, there is no built-in bounds checking. If you look beyond the end of the array, the pointer simply points further in memory than it should, and can read/write to someplace potentially dangerous. See:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">getPin</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="kt">char</span> <span class="n">pin</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>  <span class="c1">// since every string ends with NULL, we make this 5 elements big
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Enter your 4-digit pin: &#34;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Enter your 4-digit pin: &#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span> <span class="n">pin</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// process the pin
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>With this code, we are passing <code>scanf()</code> the location of the first element in the <code>pin</code> string we have created, but it doesn&rsquo;t know how big it is. If the user types in a string longer than 4 characters long, scanf will continue writing the contents past the end of the <code>pin</code> string. At best, this will cause unpredictable results, at worst this could lead to a malicious user injecting malicious code into the application. We never have to worry about this with JavaScript strings.</p>
 
 

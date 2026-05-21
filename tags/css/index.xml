@@ -4,17 +4,16 @@
     <title>CSS on Teach Me To Code</title>
     <link>https://www.christopherfujino.com/tags/css/</link>
     <description>Recent content in CSS on Teach Me To Code</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 Sep 2016 16:05:11 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 18:11:03 -0700</lastBuildDate>
     <atom:link href="https://www.christopherfujino.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A CSS Word-break Bug</title>
       <link>https://www.christopherfujino.com/posts/2016-09-12-word-break-bug/</link>
       <pubDate>Mon, 12 Sep 2016 16:05:11 +0000</pubDate>
       <guid>https://www.christopherfujino.com/posts/2016-09-12-word-break-bug/</guid>
-      <description>So on my last post, I encountered a strange bug on Chrome (but not on Firefox) where some of my text was breaking mid-word, without so much as a hyphen inserted. Here&amp;rsquo;s a screenshot:
-I&amp;rsquo;m using the Hexo framework for my blog, along with a theme from github called Apollo, so I started reading through the SASS files, but couldn&amp;rsquo;t isolate what exactly was causing this strange bug I&amp;rsquo;d never encountered before.</description>
+      <description>&lt;p&gt;So on &lt;a href=&#34;https://teach-me-to-code.github.io/2016/07/21/Teaching-C-To-A-JS-Developer/&#34;&gt;my last post&lt;/a&gt;, I encountered a strange bug on Chrome (but not on Firefox) where some of my text was breaking mid-word, without so much as a hyphen inserted. Here&amp;rsquo;s a screenshot:&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m using &lt;a href=&#34;https://hexo.io&#34;&gt;the Hexo framework&lt;/a&gt; for my blog, along with a theme from github called &lt;a href=&#34;https://github.com/pinggod/hexo-theme-apollo&#34;&gt;Apollo&lt;/a&gt;, so I started reading through the SASS files, but couldn&amp;rsquo;t isolate what exactly was causing this strange bug I&amp;rsquo;d never encountered before.&lt;/p&gt;&#xA;&lt;p&gt;Several online searches, however, lead me to the &lt;code&gt;word-break&lt;/code&gt; css property. &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/CSS/word-break&#34;&gt;According to MDN&lt;/a&gt;, &amp;ldquo;the &lt;strong&gt;word-break&lt;/strong&gt; CSS property is used to specify whether to break lines within words.&amp;rdquo; Sure enough, searching the SASS files for the Apollo theme, I found:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

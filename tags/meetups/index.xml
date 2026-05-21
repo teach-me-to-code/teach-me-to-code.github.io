@@ -4,17 +4,16 @@
     <title>Meetups on Teach Me To Code</title>
     <link>https://www.christopherfujino.com/tags/meetups/</link>
     <description>Recent content in Meetups on Teach Me To Code</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Oct 2016 18:32:22 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 18:11:03 -0700</lastBuildDate>
     <atom:link href="https://www.christopherfujino.com/tags/meetups/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sf.js</title>
       <link>https://www.christopherfujino.com/posts/2016-10-13-sfjs/</link>
       <pubDate>Thu, 13 Oct 2016 18:32:22 +0000</pubDate>
       <guid>https://www.christopherfujino.com/posts/2016-10-13-sfjs/</guid>
-      <description>I recently went to the Bay Area to visit my brother and got a chance to go to some meetups and mingle with the local nerdfolk. Here&amp;rsquo;s a summary of the meetups I attended and what I learned:
-Electron Meetup The first meetup was for the exciting new Node.js-based framework Electron. It lets you build desktop apps in HTML/CSS/JS and then distribute it to Windows/OS X/Linux. I&amp;rsquo;ve been playing around with it, so I was excited to hear more about it, especially since two of the presenters were from Github and part of the Electron team.</description>
+      <description>&lt;p&gt;I recently went to the Bay Area to visit my brother and got a chance to go to&#xA;some meetups and mingle with the local nerdfolk. Here&amp;rsquo;s a summary of the&#xA;meetups I attended and what I learned:&lt;/p&gt;&#xA;&lt;h2 id=&#34;electron-meetup&#34;&gt;Electron Meetup&lt;/h2&gt;&#xA;&lt;p&gt;The first meetup was for the exciting new Node.js-based framework&#xA;&lt;a href=&#34;electron.atom.io&#34;&gt;Electron&lt;/a&gt;. It lets you build desktop apps in HTML/CSS/JS&#xA;and then distribute it to Windows/OS X/Linux. I&amp;rsquo;ve been playing around with&#xA;it, so I was excited to hear more about it, especially since two of the&#xA;presenters were from Github and part of the Electron team.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

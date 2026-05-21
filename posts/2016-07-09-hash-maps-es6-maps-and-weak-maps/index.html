@@ -1,3 +1,5 @@
+<!-- layouts/baseof.html -->
+
 <!doctype html>
 <html lang="en">
   
@@ -14,7 +16,7 @@
     
   
   
-  <link rel="stylesheet" type="text/css" href="https://www.christopherfujino.com/syntax.min.6bc21cbdc8ed877a4427d6134f93f47b26a9e3833080d65a82fd82f51a9aaddc.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.christopherfujino.com/syntax.min.181cc7aa9e2a5673cf96229051b1112595e382e2a391bca88c3a4599ba9c6f4f.css" />
   
     <script src="https://www.christopherfujino.com/main.min.6a73a9deb2370afa158e0c66b4c27b9297f1eaca43d31c03e6ad78ffd9c4cd12.js"></script>
   
@@ -130,12 +132,12 @@
 </span></span><span class="line"><span class="cl"><span class="p">]);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>  <span class="c1">// This IIFE creates an isolated scope
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">var</span> <span class="nx">z</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">name</span> <span class="o">:</span> <span class="s1">&#39;my third object&#39;</span> <span class="p">};</span>
+</span></span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">z</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">name</span> <span class="o">:</span> <span class="s1">&#39;my third object&#39;</span> <span class="p">};</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">wm</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">z</span><span class="p">,</span> <span class="s1">&#39;metadata about z&#39;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">})();</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">z</span><span class="p">;</span>          <span class="c1">// here z is no longer in scope, we can&#39;t access it
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">wm</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">z</span><span class="p">);</span>  <span class="c1">// will this return metadata about z? can&#39;t be sure
+</span></span></span><span class="line"><span class="cl"><span class="nx">wm</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">z</span><span class="p">);</span>  <span class="c1">// will this return metadata about z? can&#39;t be sure
 </span></span></span></code></pre></div>
 
 
